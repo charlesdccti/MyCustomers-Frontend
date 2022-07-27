@@ -12,7 +12,7 @@
             {{ erro }}
         </div>
 
-        <div class="row">
+        <div class="row" *ngIf="cliente.id" >
             <div class="col-md-6">
                 <div class="form-group">
                     <label>ID:</label>
@@ -27,7 +27,9 @@
                         disabled="true">
                 </div>
             </div>
-
+        </div>
+            
+        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Nome: *</label>
