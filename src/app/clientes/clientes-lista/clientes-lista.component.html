@@ -11,10 +11,11 @@
             </div>
 
             <div class="alert alert-danger" role="alert" *ngIf="mensagemErro">
-                {{ mensagemErro  }}    
+                {{ mensagemErro }}    
             </div>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-md-2">
@@ -48,8 +49,8 @@
                                 <i class="fa fa-edit"></i>
                             </button>
 
-                            <button class="btn btn-danger" (click)="preparaDelecao(cliente)" 
-                                    data-toggle="modal" data-target="#modalDelecao">
+                            <button class="btn btn-danger" (click)="preparaDelecao(cliente)"
+                            data-toggle="modal" data-target="#modalDelecao">
                                 <i class="fa fa-trash"></i>
                             </button>
 
@@ -60,6 +61,7 @@
         </div>
     </div>
 
+
     <div id="modalDelecao" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -68,15 +70,16 @@
                 </div>
 
                 <div class="modal-body" *ngIf="clienteSelecionado">
-                    Confirma a deleção do(a) Cliente {{ clienteSelecionado.nome }}?
+                    Confirma a deleção do(a) cliente {{ clienteSelecionado.nome }}?
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-success" (click)="deletarCliente()"  
-                            data-dismiss="modal">Confirmar</button>
-                    <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-success" (click)="deletarCliente()" 
+                            data-dismiss="modal">Confirma</button>
+                    <button class="btn btn-defaut" data-dismiss="modal" >Cancela</button>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
